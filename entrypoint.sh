@@ -87,5 +87,5 @@ EOF
 
 echo "Please review test results at ${INPUT_REPORT_URL}/${INPUT_GITHUB_RUN_NUM}" >> output.md
 
-python /entrypoint.py
+python /pr-comment.py
 
