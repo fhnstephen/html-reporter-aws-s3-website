@@ -69,6 +69,9 @@ def main():
     # search a pull request that triggered this action
     gh = Github(os.getenv('GITHUB_TOKEN'))
     event = read_json(os.getenv('GITHUB_EVENT_PATH'))
+    if 'pull_request' not in event:
+        print('This is not a pull request.')
+        exit(0)
     branch_label = event['pull_request']['head']['label']  # author:branch
     branch_name = branch_label.split(':')[-1]
     repo = gh.get_repo(event['repository']['full_name'])

@@ -28,6 +28,7 @@ COPY ./entrypoint.sh /entrypoint.sh
 COPY ./pr-comment.py /pr-comment.py
 COPY ./favicon.ico /favicon.ico
 COPY ./logo.png /logo.png
+COPY ./index.html /index.html
 
 RUN pip install PyGithub
 
